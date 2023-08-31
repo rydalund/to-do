@@ -1,0 +1,148 @@
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+body {
+  background: linear-gradient(#fec5c4, #ff7c7c);
+  max-height: 100vh;
+  background-attachment: fixed;
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+}
+
+.container {
+  width: 33vw;
+  margin-top: 0.7em;
+  padding-bottom: 2em;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: white;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  box-shadow: 0px 0.6px 3.6px rgba(0, 0, 0, 0.055),
+    0px 1.8px 10px rgba(0, 0, 0, 0.066), 0px 4.2px 24.1px rgba(0, 0, 0, 0.07),
+    0px 14px 80px rgba(0, 0, 0, 0.07);
+  animation: slideDown 1s ease-out;
+  animation-fill-mode: backwards;
+  animation-delay: 0.2s;
+}
+
+@keyframes slideDown {
+  from {
+    margin-top: 0em;
+    opacity: 0.1;
+  }
+
+  75% {
+    margin-top: 4em;
+    opacity: 0.7;
+  }
+
+  to {
+    margin-top: 0.7em;
+    opacity: 1;
+  }
+}
+
+h1 {
+  padding: 0.3em;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 3em;
+  font-weight: 900;
+  animation: fade 0.5s ease-out;
+  animation-delay: 1.3s;
+  animation-fill-mode: backwards;
+}
+
+#completedList,
+#inputToDo,
+#submitButton {
+  animation: fade 0.5s ease-out;
+  animation-delay: 1.4s;
+  animation-fill-mode: backwards;
+}
+
+#completedList {
+  margin-bottom: 2em;
+}
+
+#inputToDo,
+#submitButton {
+  padding: 0.07em;
+  border: 0.05em solid;
+  border-radius: 3px;
+  font-size: 1.2em;
+  animation-delay: 1.5s;
+}
+
+#inputToDo {
+  outline: none;
+  width: 10em;
+}
+#inputToDo:hover {
+  border-color: blue;
+}
+
+#submitButton {
+  display: inline-block;
+  width: 2.5em;
+}
+
+@keyframes fade {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+#message {
+  display: block;
+  margin: 0.5em;
+  font-size: 0.9em;
+  font-style: italic;
+  color: red;
+  animation: blinker 1.5s linear infinite;
+}
+#message:hover {
+  animation: blinker none;
+}
+
+@keyframes blinker {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+li {
+  list-style-type: none;
+  margin-top: 0.7em;
+  font-size: 1.2em;
+  cursor: pointer;
+}
+
+li:first-child {
+  margin-top: 1em;
+  font-size: 1.2em;
+}
+
+.trashButton {
+  background-color: transparent;
+  outline: none;
+  border: none;
+  cursor: pointer;
+}
+
+.completed {
+  text-decoration: line-through;
+  color: #888;
+}
